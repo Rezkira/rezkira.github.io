@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yapay zekâ nedir, nasıl çalışır, nerelerde kullanılır? Türkçe, sade bir rehber.">
+  <title>Yapay Zekâ Rehberi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a href="#" class="logo">🤖 YZ<span>Rehber</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav id="menu">
+      <a href="#nedir">Nedir?</a>
+      <a href="#turler">Türler</a>
+      <a href="#alanlar">Kullanım</a>
+      <a href="#tarihce">Tarihçe</a>
+      <a href="#ekosistem">Araçlar</a>
+      <a href="#quiz">Quiz</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Temayı değiştir">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Geleceği <span class="grad" id="typed">şekillendiren</span> teknoloji</h1>
+      <p>Yapay zekâ; öğrenen, akıl yürüten ve karar veren sistemler. Bu sitede temel kavramları, kullanım alanlarını ve tarihçesini keşfet.</p>
+      <div class="hero-btns">
+        <a href="#nedir" class="btn primary">Keşfetmeye Başla</a>
+        <a href="#quiz" class="btn ghost">Kendini Test Et</a>
+      </div>
+      <div class="stats">
+        <div><strong data-count="1956">0</strong><span>"YZ" teriminin doğuşu</span></div>
+        <div><strong data-count="80">0</strong><span>% şirket YZ kullanıyor*</span></div>
+        <div><strong data-count="24">0</strong><span>saat/gün çalışabilir</span></div>
+      </div>
+    </section>
+
+    <section id="nedir" class="section reveal">
+      <h2>Yapay Zekâ Nedir?</h2>
+      <p class="lead">Yapay zekâ (YZ), bilgisayarların insan zekâsı gerektiren görevleri yerine getirmesini sağlayan bilim dalıdır: öğrenme, anlama, problem çözme ve karar verme.</p>
+      <div class="grid three">
+        <article class="card">
+          <div class="icon">📊</div>
+          <h3>Makine Öğrenmesi</h3>
+          <p>Verilerden örüntü öğrenen algoritmalar. Açıkça programlanmadan tahmin yapar.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧠</div>
+          <h3>Derin Öğrenme</h3>
+          <p>Çok katmanlı yapay sinir ağları. Görüntü, ses ve dil işlemede devrim yarattı.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💬</div>
+          <h3>Doğal Dil İşleme</h3>
+          <p>Makinelerin insan dilini anlaması ve üretmesi. Sohbet botları ve çeviri sistemleri.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="turler" class="section reveal">
+      <h2>Yapay Zekâ Türleri</h2>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="dar" role="tab">Dar YZ</button>
+        <button class="tab" data-tab="genel" role="tab">Genel YZ</button>
+        <button class="tab" data-tab="super" role="tab">Süper YZ</button>
+      </div>
+      <div class="tab-panel active" id="dar">
+        <h3>Dar (Zayıf) Yapay Zekâ</h3>
+        <p>Tek bir göreve odaklanır. Bugün kullandığımız neredeyse tüm sistemler bu gruptadır: yüz tanıma, öneri sistemleri, sesli asistanlar, satranç motorları.</p>
+      </div>
+      <div class="tab-panel" id="genel">
+        <h3>Genel Yapay Zekâ (AGI)</h3>
+        <p>İnsan gibi farklı alanlarda öğrenip düşünebilen sistem. Araştırmaların ana hedeflerinden biri; tanımı ve zamanlaması tartışmalı.</p>
+      </div>
+      <div class="tab-panel" id="super">
+        <h3>Süper Yapay Zekâ (ASI)</h3>
+        <p>İnsan zekâsını her alanda aşan varsayımsal sistem. Etik ve güvenlik tartışmalarının merkezinde yer alır.</p>
+      </div>
+    </section>
+
+    <section id="alanlar" class="section reveal">
+      <h2>Kullanım Alanları</h2>
+      <div class="grid four">
+        <article class="card small"><div class="icon">🏥</div><h3>Sağlık</h3><p>Tıbbi görüntü analizi, ilaç keşfi, erken teşhis.</p></article>
+        <article class="card small"><div class="icon">🚗</div><h3>Ulaşım</h3><p>Otonom araçlar, trafik optimizasyonu.</p></article>
+        <article class="card small"><div class="icon">🎓</div><h3>Eğitim</h3><p>Kişiselleştirilmiş öğrenme, akıllı asistanlar.</p></article>
+        <article class="card small"><div class="icon">💰</div><h3>Finans</h3><p>Dolandırıcılık tespiti, risk analizi.</p></article>
+        <article class="card small"><div class="icon">🎨</div><h3>Sanat</h3><p>Görsel, müzik ve metin üretimi.</p></article>
+        <article class="card small"><div class="icon">🌾</div><h3>Tarım</h3><p>Hastalık tespiti, verim tahmini.</p></article>
+        <article class="card small"><div class="icon">🛒</div><h3>E-ticaret</h3><p>Öneri sistemleri, talep tahmini.</p></article>
+        <article class="card small"><div class="icon">💻</div><h3>Yazılım</h3><p>Kod üretimi, hata ayıklama, test.</p></article>
+      </div>
+    </section>
+
+    <section id="tarihce" class="section reveal">
+      <h2>Kısa Tarihçe</h2>
+      <ol class="timeline">
+        <li><span>1950</span><p>Alan Turing, "Makineler düşünebilir mi?" sorusunu sorar ve Turing Testi'ni önerir.</p></li>
+        <li><span>1956</span><p>Dartmouth Konferansı'nda "Yapay Zekâ" terimi ilk kez kullanılır.</p></li>
+        <li><span>1997</span><p>IBM Deep Blue, dünya satranç şampiyonu Garry Kasparov'u yener.</p></li>
+        <li><span>2012</span><p>AlexNet ile derin öğrenme görüntü tanımada çığır açar.</p></li>
+        <li><span>2016</span><p>AlphaGo, Go şampiyonu Lee Sedol'u yener.</p></li>
+        <li><span>2017</span><p>"Attention Is All You Need" makalesiyle Transformer mimarisi doğar.</p></li>
+        <li><span>2022+</span><p>Büyük dil modelleri ve sohbet asistanları milyonlarca kişiye ulaşır.</p></li>
+      </ol>
+    </section>
+
+    <section id="ekosistem" class="section reveal">
+      <h2>YZ Ekosistemi: Skill, MCP ve CLI</h2>
+      <p class="lead">Modern yapay zekâ asistanları sadece sohbet etmez; araç kullanır, dosya düzenler, kod çalıştırır. Bunu üç temel kavram mümkün kılar.</p>
+
+      <div class="grid three">
+        <article class="card">
+          <div class="icon">🧩</div>
+          <h3>Skill (Yetenek)</h3>
+          <p>Modele belirli bir işi nasıl yapacağını öğreten paket: talimat dosyası (ör. <code>SKILL.md</code>), şablonlar ve betikler. Gerektiğinde yüklenir.</p>
+          <p class="example"><strong>Örnek:</strong> PDF doldurma, Excel raporu, şirket kod standardı, sunum hazırlama.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔌</div>
+          <h3>MCP (Model Context Protocol)</h3>
+          <p>YZ'yi dış araç ve verilere bağlayan açık standart. "YZ için USB-C" gibi düşün: bir MCP sunucusu yaz, her uyumlu asistan kullansın.</p>
+          <p class="example"><strong>Örnek:</strong> GitHub, Slack, veritabanı, tarayıcı, Figma bağlantıları.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⌨️</div>
+          <h3>CLI (Komut Satırı Aracı)</h3>
+          <p>Terminalde çalışan YZ ajanı. Projeni okur, dosya düzenler, komut çalıştırır, test eder, commit atar.</p>
+          <p class="example"><strong>Örnek:</strong> Kod yazma, hata ayıklama, refactor, otomasyon.</p>
+        </article>
+      </div>
+
+      <h3 class="sub">Popüler Asistanlar ve Araçları</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Asistan</th><th>Geliştirici</th><th>CLI</th><th>Genişletme</th><th>Öne çıkan</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Claude</strong></td><td>Anthropic</td><td><code>claude</code> (Claude Code)</td><td>Skills, MCP, Hooks, Subagent</td><td>Kodlama, uzun bağlam, MCP'nin yaratıcısı</td></tr>
+            <tr><td><strong>ChatGPT</strong></td><td>OpenAI</td><td><code>codex</code> (Codex CLI)</td><td>GPTs, Apps, MCP desteği</td><td>Genel sohbet, görsel üretim, ses</td></tr>
+            <tr><td><strong>Gemini</strong></td><td>Google</td><td><code>gemini</code> (Gemini CLI)</td><td>Gems, Extensions, MCP</td><td>Google servisleri entegrasyonu, çok modlu</td></tr>
+            <tr><td><strong>GitHub Copilot</strong></td><td>GitHub / Microsoft</td><td><code>copilot</code> (Copilot CLI)</td><td>Agent mode, MCP</td><td>Editör içi kod tamamlama, PR yardımı</td></tr>
+            <tr><td><strong>Cursor</strong></td><td>Anysphere</td><td><code>cursor-agent</code></td><td>Rules, MCP</td><td>YZ odaklı kod editörü</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub">Sık Kullanılan MCP Sunucuları</h3>
+      <div class="grid four">
+        <article class="card small"><div class="icon">📁</div><h3>Filesystem</h3><p>Yerel dosyaları okuma/yazma.</p></article>
+        <article class="card small"><div class="icon">🐙</div><h3>GitHub</h3><p>Issue, PR, repo yönetimi.</p></article>
+        <article class="card small"><div class="icon">🌐</div><h3>Playwright</h3><p>Tarayıcıyı kontrol etme, test, ekran görüntüsü.</p></article>
+        <article class="card small"><div class="icon">🗄️</div><h3>PostgreSQL</h3><p>Veritabanına sorgu atma.</p></article>
+        <article class="card small"><div class="icon">💬</div><h3>Slack</h3><p>Mesaj okuma ve gönderme.</p></article>
+        <article class="card small"><div class="icon">🎨</div><h3>Figma</h3><p>Tasarımdan koda, koddan tasarıma.</p></article>
+        <article class="card small"><div class="icon">📚</div><h3>Context7</h3><p>Kütüphanelerin güncel dokümantasyonu.</p></article>
+        <article class="card small"><div class="icon">🔎</div><h3>Web Arama</h3><p>İnternetten güncel bilgi çekme.</p></article>
+      </div>
+
+      <h3 class="sub">Hızlı Başlangıç</h3>
+      <pre class="code"><code># Claude Code kur ve çalıştır
+npm install -g @anthropic-ai/claude-code
+claude
+
+# Bir MCP sunucusu ekle (ör. Playwright)
+claude mcp add playwright -- npx @playwright/mcp@latest
+
+# Gemini CLI
+npm install -g @google/gemini-cli
+gemini
+
+# OpenAI Codex CLI
+npm install -g @openai/codex
+codex</code></pre>
+      <p class="note-inline">Komutlar sürüme göre değişebilir; resmî dokümantasyonu kontrol et.</p>
+    </section>
+
+    <section id="quiz" class="section reveal">
+      <h2>Mini Quiz</h2>
+      <div class="quiz card">
+        <p class="q-count" id="qCount"></p>
+        <h3 id="qText"></h3>
+        <div class="options" id="qOptions"></div>
+        <p class="q-feedback" id="qFeedback" aria-live="polite"></p>
+        <button class="btn primary" id="qNext" hidden>Sonraki</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> YZ Rehber · GitHub Pages ile yayınlandı</p>
+    <p class="note">* Yaklaşık değer; kaynaklara göre değişir.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
