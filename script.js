@@ -140,6 +140,27 @@ document.querySelectorAll(".tab").forEach((tab) => {
   });
 });
 
+// ---------- Glossary search ----------
+const glossarySearch = document.getElementById("glossarySearch");
+const glossaryItems = [...document.querySelectorAll("#glossary details")];
+const glossaryCount = document.getElementById("glossaryCount");
+const glossaryEmpty = document.getElementById("glossaryEmpty");
+
+function filterGlossary() {
+  const query = glossarySearch.value.trim().toLocaleLowerCase("tr");
+  let visible = 0;
+  glossaryItems.forEach((item) => {
+    const match = item.textContent.toLocaleLowerCase("tr").includes(query);
+    item.hidden = !match;
+    if (match) visible++;
+  });
+  glossaryCount.textContent = `${visible} / ${glossaryItems.length} terim`;
+  glossaryEmpty.hidden = visible > 0;
+}
+
+glossarySearch.addEventListener("input", filterGlossary);
+filterGlossary();
+
 // ---------- Quiz ----------
 const questions = [
   {

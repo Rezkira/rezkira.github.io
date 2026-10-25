@@ -216,6 +216,37 @@ pre.code {
 pre.code code { background: none; border: none; padding: 0; color: inherit; }
 .note-inline { color: var(--muted); font-size: 0.85rem; margin-top: 0.6rem; }
 
+/* Glossary */
+.search-wrap { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+#glossarySearch {
+  flex: 1;
+  min-width: 0;
+  max-width: 480px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+#glossarySearch:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.25); }
+.search-count { color: var(--muted); font-size: 0.9rem; }
+.glossary { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; align-items: start; }
+.glossary details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  transition: border-color 0.2s;
+}
+.glossary details[open] { border-color: var(--accent); }
+.glossary summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.glossary summary::-webkit-details-marker { display: none; }
+.glossary summary::after { content: "+"; color: var(--accent-2); font-weight: 800; }
+.glossary details[open] summary::after { content: "−"; }
+.glossary details p { color: var(--muted); margin-top: 0.6rem; }
+.no-result { color: var(--muted); margin-top: 1rem; }
+
 /* Quiz */
 .quiz { max-width: 700px; }
 .q-count { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
@@ -251,6 +282,11 @@ footer .note { font-size: 0.8rem; margin-top: 0.4rem; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+/* Tablet: tighter nav so all links fit next to the logo */
+@media (max-width: 1000px) {
+  .nav nav { gap: 1rem; }
+}
+
 /* Mobile */
 @media (max-width: 760px) {
   .menu-btn { display: block; }
@@ -267,6 +303,6 @@ footer .note { font-size: 0.8rem; margin-top: 0.4rem; }
   }
   .nav nav.open { display: flex; }
   .stats { gap: 1.5rem; }
-  .grid.three { grid-template-columns: 1fr; }
+  .grid.three, .glossary { grid-template-columns: 1fr; }
   #bg { opacity: 0.5; }
 }

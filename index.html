@@ -23,6 +23,7 @@
       <a href="#alanlar">Kullanım</a>
       <a href="#tarihce">Tarihçe</a>
       <a href="#ekosistem">Araçlar</a>
+      <a href="#sozluk">Sözlük</a>
       <a href="#quiz">Quiz</a>
       <button class="theme-btn" id="themeBtn" aria-label="Temayı değiştir">🌙</button>
     </nav>
@@ -182,6 +183,38 @@ gemini
 npm install -g @openai/codex
 codex</code></pre>
       <p class="note-inline">Komutlar sürüme göre değişebilir; resmî dokümantasyonu kontrol et.</p>
+    </section>
+
+    <section id="sozluk" class="section reveal">
+      <h2>YZ Sözlüğü</h2>
+      <p class="lead">Yapay zekâ konuşurken sık geçen terimler. Bir terime tıkla, açıklamasını gör.</p>
+      <div class="search-wrap">
+        <input type="search" id="glossarySearch" placeholder="Terim ara… (ör. token, RAG)" aria-label="Sözlükte ara">
+        <span class="search-count" id="glossaryCount" aria-live="polite"></span>
+      </div>
+      <div class="glossary" id="glossary">
+        <details><summary>Algoritma</summary><p>Bir problemi çözmek için izlenen adım adım talimatlar dizisi. Tüm YZ sistemlerinin temelinde algoritmalar vardır.</p></details>
+        <details><summary>Yapay Sinir Ağı</summary><p>İnsan beynindeki nöronlardan esinlenen, birbirine bağlı katmanlardan oluşan model. Derin öğrenmenin yapı taşıdır.</p></details>
+        <details><summary>LLM (Büyük Dil Modeli)</summary><p>Çok büyük miktarda metinle eğitilmiş, metin anlayıp üretebilen model. Claude, GPT ve Gemini birer LLM'dir.</p></details>
+        <details><summary>Üretken YZ (Generative AI)</summary><p>Yeni içerik (metin, görsel, ses, video, kod) üretebilen yapay zekâ sistemleri.</p></details>
+        <details><summary>Token</summary><p>Modelin metni işlerken kullandığı küçük parça. Bir kelime bir ya da birkaç token olabilir. Fiyatlandırma ve limitler genelde token ile ölçülür.</p></details>
+        <details><summary>Prompt</summary><p>Modele verilen talimat ya da soru. İyi yazılmış bir prompt, çok daha iyi sonuç verir.</p></details>
+        <details><summary>Bağlam Penceresi (Context Window)</summary><p>Modelin tek seferde "aklında tutabildiği" toplam token miktarı. Konuşma geçmişi ve eklenen dosyalar bu pencereye sığmalıdır.</p></details>
+        <details><summary>Parametre</summary><p>Modelin eğitim sırasında öğrendiği sayısal değerler. Büyük modellerde milyarlarca parametre bulunur.</p></details>
+        <details><summary>Eğitim (Training)</summary><p>Modelin veri üzerinden örüntü öğrenip parametrelerini ayarladığı süreç. Çok fazla veri ve işlem gücü gerektirir.</p></details>
+        <details><summary>İnce Ayar (Fine-tuning)</summary><p>Önceden eğitilmiş bir modeli, belirli bir görev ya da alan için daha küçük bir veriyle yeniden eğitmek.</p></details>
+        <details><summary>Çıkarım (Inference)</summary><p>Eğitilmiş modelin yeni bir girdiye yanıt üretmesi. Sohbet ettiğinde gerçekleşen şey çıkarımdır.</p></details>
+        <details><summary>Halüsinasyon</summary><p>Modelin kendinden emin şekilde yanlış ya da uydurma bilgi üretmesi. Önemli bilgileri her zaman kaynaktan doğrula.</p></details>
+        <details><summary>RAG (Retrieval-Augmented Generation)</summary><p>Modelin yanıt vermeden önce bir belge ya da veritabanından ilgili bilgiyi bulup kullanması. Halüsinasyonu azaltır, güncel bilgi sağlar.</p></details>
+        <details><summary>Embedding (Gömme)</summary><p>Metni, anlamını temsil eden sayı dizisine (vektöre) dönüştürmek. Benzer anlamlı metinler birbirine yakın vektörler alır; arama ve RAG'de kullanılır.</p></details>
+        <details><summary>Transformer</summary><p>2017'de tanıtılan, "dikkat" (attention) mekanizmasına dayanan sinir ağı mimarisi. Günümüz LLM'lerinin temelidir.</p></details>
+        <details><summary>Ajan (Agent)</summary><p>Hedefe ulaşmak için kendi başına plan yapan, araç kullanan ve adım adım ilerleyen YZ sistemi.</p></details>
+        <details><summary>Çok Modlu (Multimodal)</summary><p>Metin, görsel, ses gibi birden fazla veri türünü anlayabilen ve üretebilen model.</p></details>
+        <details><summary>Sıcaklık (Temperature)</summary><p>Yanıtların ne kadar rastgele olacağını belirleyen ayar. Düşük değer daha tutarlı, yüksek değer daha yaratıcı yanıtlar verir.</p></details>
+        <details><summary>Aşırı Öğrenme (Overfitting)</summary><p>Modelin eğitim verisini ezberleyip yeni verilerde kötü sonuç vermesi.</p></details>
+        <details><summary>Veri Seti (Dataset)</summary><p>Modeli eğitmek ya da test etmek için kullanılan düzenli veri koleksiyonu.</p></details>
+      </div>
+      <p class="no-result" id="glossaryEmpty" hidden>Eşleşen terim bulunamadı.</p>
     </section>
 
     <section id="quiz" class="section reveal">

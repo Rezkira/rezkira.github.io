@@ -8,6 +8,7 @@ Yapay zekâ hakkında Türkçe, tek sayfalık statik tanıtım sitesi.
 - Koyu / açık tema
 - YZ türleri sekmeleri, kullanım alanları, tarihçe zaman çizelgesi
 - YZ ekosistemi: Skill, MCP, CLI açıklamaları; popüler asistanlar tablosu; MCP sunucuları
+- Aramalı YZ sözlüğü (20 terim)
 - Mini quiz
 - Mobil uyumlu, framework yok (saf HTML/CSS/JS)
 
