@@ -1,8 +1,10 @@
 // ---------- Neural network background ----------
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
-const NODE_COUNT = 70;
-const LINK_DISTANCE = 140;
+const MAX_NODES = 70;
+const PIXELS_PER_NODE = 15000;
+const MOBILE_WIDTH = 760;
+let linkDistance = 140;
 let nodes = [];
 
 function resizeCanvas() {
@@ -11,7 +13,10 @@ function resizeCanvas() {
 }
 
 function createNodes() {
-  nodes = Array.from({ length: NODE_COUNT }, () => ({
+  // Fewer, shorter links on small screens so text stays readable
+  const count = Math.min(MAX_NODES, Math.round((canvas.width * canvas.height) / PIXELS_PER_NODE));
+  linkDistance = canvas.width < MOBILE_WIDTH ? 100 : 140;
+  nodes = Array.from({ length: count }, () => ({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
     vx: (Math.random() - 0.5) * 0.5,
@@ -32,8 +37,8 @@ function drawNetwork() {
       const dx = nodes[i].x - nodes[j].x;
       const dy = nodes[i].y - nodes[j].y;
       const dist = Math.hypot(dx, dy);
-      if (dist < LINK_DISTANCE) {
-        ctx.strokeStyle = `rgba(124, 92, 255, ${1 - dist / LINK_DISTANCE})`;
+      if (dist < linkDistance) {
+        ctx.strokeStyle = `rgba(124, 92, 255, ${1 - dist / linkDistance})`;
         ctx.lineWidth = 0.6;
         ctx.beginPath();
         ctx.moveTo(nodes[i].x, nodes[i].y);
